@@ -29,6 +29,7 @@ class FeatureModel {
     const FeatureModel(
       title: 'أذكار',
       image: 'assets/images/azkar.png',
+      routeName: 'azkar_categories',
     ),
     const FeatureModel(
       title: ' أسماء الله الحسنى',

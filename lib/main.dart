@@ -13,6 +13,11 @@ import 'core/theming/app_themes.dart';
 import 'core/theming/constants.dart';
 import 'features/audio/data/repos/recitations_repo_impl.dart';
 import 'features/audio/ui/screens/audio.dart';
+import 'features/azkar/data/repos/azkar_rep_impl.dart';
+import 'features/azkar/ui/controller/azkar_categories_cubit/azkar_categories_cubit.dart';
+import 'features/azkar/ui/controller/azkar_cubit/azkar_cubit.dart';
+import 'features/azkar/ui/screens/azkar_categories.dart';
+import 'features/azkar/ui/screens/azkar_screen.dart';
 import 'features/home/ui/screens/home.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_surahs_cubit.dart';
@@ -83,6 +88,10 @@ class MyApp extends StatelessWidget {
                 QuranRepoImpl(),
               ),
             ),
+            BlocProvider(create: (context) => AzkarCubit(AzkarRepoImpl())),
+            BlocProvider(
+                create: (context) => AzkarCategoriesCubit(AzkarRepoImpl())
+                  ..loadAzkarCategories()),
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -102,6 +111,11 @@ class MyApp extends StatelessWidget {
               SuraDetailsScreen.routeName: (context) =>
                   const SuraDetailsScreen(),
               SurahAudioView.routeName: (context) => const SurahAudioView(),
+              AzkarCategoriesScreen.routeName: (context) =>
+                  const AzkarCategoriesScreen(),
+              AzkarScreen.routeName: (context) => const AzkarScreen(
+                    title: "",
+                  ),
             },
           ),
         );
