@@ -40,12 +40,14 @@ class HomeScreenBody extends StatelessWidget {
             const PrayerContainer(),
             const LastReadSurah(),
             GridView.builder(
-              padding: EdgeInsets.zero,
+              padding: EdgeInsets.only(
+                top: AppConstants.defaultPadding.h,
+              ),
               shrinkWrap: true,
               physics: const NeverScrollableScrollPhysics(),
               itemCount: FeatureModel.features.length,
               gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
-                crossAxisSpacing: 10,
+                crossAxisSpacing: 20,
                 crossAxisCount: 2,
               ),
               itemBuilder: (context, index) => FeatureItem(

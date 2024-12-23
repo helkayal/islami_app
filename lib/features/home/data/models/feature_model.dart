@@ -10,8 +10,9 @@ class FeatureModel {
   });
   static List<FeatureModel> features = [
     const FeatureModel(
-      title: 'أحاديث',
-      image: 'assets/images/hadith.png',
+      title: 'الأذكار',
+      image: 'assets/images/azkar.png',
+      routeName: 'azkar_categories',
     ),
     const FeatureModel(
       title: 'القرآن الكريم',
@@ -19,21 +20,20 @@ class FeatureModel {
       routeName: 'quran_home',
     ),
     const FeatureModel(
-      title: 'تسبيح',
-      image: 'assets/images/tasbih.jpeg',
+      title: 'القبله',
+      image: 'assets/images/qibla1.png',
     ),
     const FeatureModel(
       title: ' مواقيت الصلاة ',
       image: 'assets/images/prayer_time.png',
     ),
     const FeatureModel(
-      title: 'أذكار',
-      image: 'assets/images/azkar.png',
-      routeName: 'azkar_categories',
+      title: 'أحاديث',
+      image: 'assets/images/hadith.png',
     ),
     const FeatureModel(
       title: ' أسماء الله الحسنى',
-      image: 'assets/images/assmaAllah.png',
+      image: 'assets/images/asmaaAllah.png',
     ),
   ];
 }

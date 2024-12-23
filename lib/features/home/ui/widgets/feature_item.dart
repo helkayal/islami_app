@@ -25,21 +25,18 @@ class FeatureItem extends StatelessWidget {
       child: Column(
         children: [
           Container(
-            width: 120.w,
-            height: 100.h,
+            padding: const EdgeInsets.all(AppConstants.defaultPadding),
             decoration: BoxDecoration(
-              color: Colors.white,
-              border: Border.all(
-                color: AppColors.lightGrey,
-              ),
+              color: AppColors.lightGrey.withOpacity(.3),
               borderRadius:
                   BorderRadius.circular(AppConstants.defaultRadius * 2),
             ),
             child: ClipRRect(
               borderRadius:
-                  BorderRadius.circular(AppConstants.defaultRadius * 3),
+                  BorderRadius.circular(AppConstants.defaultRadius * 2),
               child: Image.asset(
                 image,
+                height: 90.h,
                 fit: BoxFit.fill,
               ),
             ),
