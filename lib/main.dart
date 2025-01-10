@@ -19,6 +19,7 @@ import 'features/azkar/ui/controller/azkar_cubit/azkar_cubit.dart';
 import 'features/azkar/ui/screens/azkar_categories.dart';
 import 'features/azkar/ui/screens/azkar_screen.dart';
 import 'features/home/ui/screens/home.dart';
+import 'features/qibla/ui/screens/qibla.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_surahs_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/surah_ayas_cubit.dart';
@@ -116,6 +117,7 @@ class MyApp extends StatelessWidget {
               AzkarScreen.routeName: (context) => const AzkarScreen(
                     title: "",
                   ),
+              QiblaScreen.routeName: (context) => const QiblaScreen(),
             },
           ),
         );

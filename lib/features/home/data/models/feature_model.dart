@@ -22,6 +22,7 @@ class FeatureModel {
     const FeatureModel(
       title: 'القبله',
       image: 'assets/images/qibla1.png',
+      routeName: 'qibla_screen',
     ),
     const FeatureModel(
       title: ' مواقيت الصلاة ',
