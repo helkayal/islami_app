@@ -3,9 +3,10 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 
 import '../../../../core/theming/colors.dart';
 
-class CustomAppBar extends StatelessWidget implements PreferredSizeWidget {
+class CustomWidgetsAppBar extends StatelessWidget
+    implements PreferredSizeWidget {
   final String title;
-  const CustomAppBar({
+  const CustomWidgetsAppBar({
     super.key,
     required this.title,
   });

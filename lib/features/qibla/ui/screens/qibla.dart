@@ -5,8 +5,8 @@ import 'package:flutter_compass/flutter_compass.dart';
 import 'package:geolocator/geolocator.dart';
 import 'package:islami_app/features/qibla/ui/widgets/compass_custompainter.dart';
 
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/grdient_container.dart';
-import '../widgets/custom_app_bar.dart';
 
 class QiblaScreen extends StatefulWidget {
   static const routeName = 'qibla_screen';
@@ -32,7 +32,7 @@ class _QiblaScreenState extends State<QiblaScreen> {
 
     return SafeArea(
       child: Scaffold(
-        appBar: const CustomAppBar(
+        appBar: const CustomWidgetsAppBar(
           title: "إتجاه القبله",
         ),
         body: GrdientContainer(

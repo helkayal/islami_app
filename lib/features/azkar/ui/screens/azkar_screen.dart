@@ -3,11 +3,11 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/grdient_container.dart';
 import '../controller/azkar_cubit/azkar_cubit.dart';
 import '../controller/azkar_cubit/azkar_states.dart';
 import '../widgets/azkar_item.dart';
-import '../widgets/custom_app_bar.dart';
 
 class AzkarScreen extends StatelessWidget {
   static const routeName = 'azkar_screen';
@@ -17,7 +17,7 @@ class AzkarScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: CustomAppBar(
+      appBar: CustomWidgetsAppBar(
         title: title,
       ),
       body: BlocBuilder<AzkarCubit, AzkarState?>(

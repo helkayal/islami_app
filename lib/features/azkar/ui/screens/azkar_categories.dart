@@ -5,12 +5,12 @@ import 'package:loading_animation_widget/loading_animation_widget.dart';
 
 import '../../../../core/theming/colors.dart';
 import '../../../../core/theming/constants.dart';
+import '../../../../core/widgets/custom_app_bar.dart';
 import '../../../../core/widgets/grdient_container.dart';
 import '../controller/azkar_categories_cubit/azkar_categories_cubit.dart';
 import '../controller/azkar_categories_cubit/azkar_categories_states.dart';
 import '../controller/azkar_cubit/azkar_cubit.dart';
 import '../widgets/azkar_category_item.dart';
-import '../widgets/custom_app_bar.dart';
 import 'azkar_screen.dart';
 
 class AzkarCategoriesScreen extends StatelessWidget {
@@ -22,7 +22,7 @@ class AzkarCategoriesScreen extends StatelessWidget {
   Widget build(BuildContext context) {
     return SafeArea(
       child: Scaffold(
-        appBar: const CustomAppBar(
+        appBar: const CustomWidgetsAppBar(
           title: "الأذكـــار",
         ),
         body: BlocBuilder<AzkarCategoriesCubit, AzkarCategoriesState>(

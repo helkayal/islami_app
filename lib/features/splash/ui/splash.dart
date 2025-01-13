@@ -20,7 +20,7 @@ class _SplashScreenState extends State<SplashScreen> {
   void initState() {
     super.initState();
     Timer(
-      const Duration(seconds: 5),
+      const Duration(seconds: 3),
       () {
         Navigator.pushReplacement(
             context,
@@ -54,7 +54,7 @@ class _SplashScreenState extends State<SplashScreen> {
               'إسلاميات ',
               style: TextStyle(
                 color: AppColors.textColor,
-                fontSize: 36.sp,
+                fontSize: 32.sp,
                 fontWeight: FontWeight.bold,
               ),
             ),
@@ -68,7 +68,7 @@ class _SplashScreenState extends State<SplashScreen> {
                 "صديقك اليومي الذي يوفر لك أوقات الصلاة، الأذكار، تلاوة القرآن، اتجاه القبلة، والمزيد لمساعدتك في تعزيز عملك الديني بسهولة ويسر",
                 style: TextStyle(
                   color: AppColors.textColor,
-                  fontSize: 26.sp,
+                  fontSize: 22.sp,
                   fontWeight: FontWeight.bold,
                 ),
                 textAlign: TextAlign.center,

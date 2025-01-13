@@ -5,6 +5,7 @@ import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:intl/date_symbol_data_local.dart';
 import 'package:islami_app/features/audio/ui/controller/surah_audio_cubit/surah_audio_cubit.dart';
 import 'package:islami_app/features/audio/ui/screens/surah_audio_view.dart';
+import 'package:islami_app/features/prayer/data/repos/prayer_times_repo_impl.dart';
 import 'package:islami_app/features/quran/data/repos/quran_repo_impl.dart';
 import 'package:islami_app/features/quran/ui/controller/surah_cubit/quran_cubit.dart';
 import 'package:islami_app/features/quran/ui/controller/surah_details_cubit/surah_details_cubit.dart';
@@ -19,6 +20,8 @@ import 'features/azkar/ui/controller/azkar_cubit/azkar_cubit.dart';
 import 'features/azkar/ui/screens/azkar_categories.dart';
 import 'features/azkar/ui/screens/azkar_screen.dart';
 import 'features/home/ui/screens/home.dart';
+import 'features/prayer/ui/controller/prayer_times_cubit.dart';
+import 'features/prayer/ui/screens/prayer.dart';
 import 'features/qibla/ui/screens/qibla.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_cubit.dart';
 import 'features/quran/ui/controller/juzaa_cubit/juzaa_surahs_cubit.dart';
@@ -93,6 +96,10 @@ class MyApp extends StatelessWidget {
             BlocProvider(
                 create: (context) => AzkarCategoriesCubit(AzkarRepoImpl())
                   ..loadAzkarCategories()),
+            BlocProvider<PrayerTimesCubit>(
+              create: (context) =>
+                  PrayerTimesCubit(prayerTimesRepo: PrayerTimesRepoImpl()),
+            ),
           ],
           child: MaterialApp(
             debugShowCheckedModeBanner: false,
@@ -118,6 +125,8 @@ class MyApp extends StatelessWidget {
                     title: "",
                   ),
               QiblaScreen.routeName: (context) => const QiblaScreen(),
+              PrayerTimesScreen.routeName: (context) =>
+                  const PrayerTimesScreen(),
             },
           ),
         );

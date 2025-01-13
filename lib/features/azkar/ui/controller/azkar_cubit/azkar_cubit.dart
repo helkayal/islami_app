@@ -1,6 +1,6 @@
 import 'package:flutter_bloc/flutter_bloc.dart';
 
-import 'package:islami_app/features/azkar/data/repos/azkar_repo.dart';
+import '../../../data/repos/azkar_repo.dart';
 import 'azkar_states.dart';
 
 class AzkarCubit extends Cubit<AzkarState> {

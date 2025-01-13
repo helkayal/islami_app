@@ -27,6 +27,7 @@ class FeatureModel {
     const FeatureModel(
       title: ' مواقيت الصلاة ',
       image: 'assets/images/prayer_time.png',
+      routeName: 'prayer_times',
     ),
     const FeatureModel(
       title: 'أحاديث',
