@@ -19,6 +19,7 @@ import 'features/azkar/ui/controller/azkar_categories_cubit/azkar_categories_cub
 import 'features/azkar/ui/controller/azkar_cubit/azkar_cubit.dart';
 import 'features/azkar/ui/screens/azkar_categories.dart';
 import 'features/azkar/ui/screens/azkar_screen.dart';
+import 'features/calendar/ui/screens/calendar.dart';
 import 'features/home/ui/screens/home.dart';
 import 'features/prayer/ui/controller/prayer_times_cubit.dart';
 import 'features/prayer/ui/screens/prayer.dart';
@@ -127,6 +128,8 @@ class MyApp extends StatelessWidget {
               QiblaScreen.routeName: (context) => const QiblaScreen(),
               PrayerTimesScreen.routeName: (context) =>
                   const PrayerTimesScreen(),
+              HijriCalendarScreen.routeName: (context) =>
+                  const HijriCalendarScreen(),
             },
           ),
         );

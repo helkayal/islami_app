@@ -30,8 +30,9 @@ class FeatureModel {
       routeName: 'prayer_times',
     ),
     const FeatureModel(
-      title: 'احاديث',
-      image: 'assets/images/hadith.png',
+      title: 'التوقيت الهجري',
+      image: 'assets/images/hijri_calendar.jpg',
+      routeName: 'hijri_calendar',
     ),
     const FeatureModel(
       title: ' أسماء الله الحسنى',
