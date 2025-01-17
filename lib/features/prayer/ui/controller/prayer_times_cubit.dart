@@ -50,16 +50,15 @@ class PrayerTimesCubit extends Cubit<PrayerTimesState> {
 
           // 2.c) Hijri date with hijri package
           final hijriCalendar = HijriCalendar.now();
-          // If you want Arabic month names, do: HijriCalendar.setLocal("ar");
           // Adjust by +/- 1 if needed: hijriCalendar.hijriAdjust = 1;
-          final hijriDay = hijriCalendar.hDay;
-          final hijriMonthName = hijriCalendar.longMonthName;
-          final hijriYear = hijriCalendar.hYear;
-          final hijriDateString = '$hijriDay - $hijriMonthName - $hijriYear';
+          HijriCalendar.setLocal("ar");
+          final hijriDateString = hijriCalendar.toFormat("dd MM yyyy");
 
           // 2.d) Gregorian date with intl
           final now = DateTime.now();
-          final gregorianDateString = DateFormat('dd-MMMM-yyyy').format(now);
+          final gregorianDateString =
+              DateFormat.yMMMMd('ar').format(now).toString();
+          // DateFormat('dd-MMMM-yyyy').format(now);
 
           // 2.e) Finally emit loaded state
           emit(PrayerTimesLoaded(

@@ -28,7 +28,6 @@ class HomeScreenBody extends StatelessWidget {
               ),
               child: Text(
                 DateFormat.yMMMMd('ar').format(DateTime.now()).toString(),
-                // "الجمعه ، ٨ نوفمبر ٢٠٢٤",
                 style: Theme.of(context).textTheme.bodyMedium!.copyWith(
                       color: AppColors.textColor,
                       fontWeight: FontWeight.bold,

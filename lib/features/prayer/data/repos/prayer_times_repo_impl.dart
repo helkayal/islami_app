@@ -25,14 +25,14 @@ class PrayerTimesRepoImpl implements PrayerTimesRepo {
 
       // 4) Convert prayer times to List<String>
       final timesList = <PrayerTimeModel>[
-        PrayerTimeModel(name: 'Fajr', dateTime: prayerTimes.fajr!.toLocal()),
+        PrayerTimeModel(name: 'الفجر', dateTime: prayerTimes.fajr!.toLocal()),
         PrayerTimeModel(
-            name: 'Sunrise', dateTime: prayerTimes.sunrise!.toLocal()),
-        PrayerTimeModel(name: 'Dhuhr', dateTime: prayerTimes.dhuhr!.toLocal()),
-        PrayerTimeModel(name: 'Asr', dateTime: prayerTimes.asr!.toLocal()),
+            name: 'الشروق', dateTime: prayerTimes.sunrise!.toLocal()),
+        PrayerTimeModel(name: 'الظهر', dateTime: prayerTimes.dhuhr!.toLocal()),
+        PrayerTimeModel(name: 'العصر', dateTime: prayerTimes.asr!.toLocal()),
         PrayerTimeModel(
-            name: 'Maghrib', dateTime: prayerTimes.maghrib!.toLocal()),
-        PrayerTimeModel(name: 'Isha', dateTime: prayerTimes.isha!.toLocal()),
+            name: 'المغرب', dateTime: prayerTimes.maghrib!.toLocal()),
+        PrayerTimeModel(name: 'العشاء', dateTime: prayerTimes.isha!.toLocal()),
       ];
 
       return Right(timesList);

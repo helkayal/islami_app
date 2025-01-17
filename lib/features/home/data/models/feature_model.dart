@@ -30,7 +30,7 @@ class FeatureModel {
       routeName: 'prayer_times',
     ),
     const FeatureModel(
-      title: 'أحاديث',
+      title: 'احاديث',
       image: 'assets/images/hadith.png',
     ),
     const FeatureModel(
